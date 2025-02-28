@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(51, 19, 51);
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: "Montserrat", sans-serif;
+}
+nav ul{
+    list-style: none;
+
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.container{
+    
+    position: relative;
+    display: grid;
+    /* create 3 rows with 10% width of viewport */
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: "Montserrat", sans-serif;
+
+
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.box:hover{
+    background-color: rgb(118, 224, 205);
+}
+
+.gameinfo{
+    padding: 0 34px;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    /* border right=0 */
+    border-right: 0;
+}
+.bl-0{
+    /* border left=0 */
+    border-left: 0;
+}
+.bt-0{
+    /* border top=0 */
+    border-top: 0;
+}
+.bb-0{
+    /* border bottom: ;=0 */
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 14px 20px 20px 19px;
+    padding: 4px 12px 4px 12px;
+    background: rgb(118, 81, 33);
+    border: 3px solid blanchedalmond;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(197, 197, 197);
+}
+
+.line{
+    background-color: black;
+    width: 0vw;
+    height: 3px;
+    position: absolute;
+    transition: width 0.7s ease-in-out;
+
+
+}
+
+.info{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen  and (max-width:800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 45px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    
+}
+@media screen  and (max-width:600px){
+    .container {
+    grid-template-rows: repeat(3,19vw);
+    grid-template-columns: repeat(3,22vw);
+    
+    }
+    .gameinfo h1{
+        font-size: 2.05rem;
+    }
+    .info{
+        font-size: 1.8rem;
+    }
+    #reset{
+        font-size: 29px;
+    }
+    
+}
